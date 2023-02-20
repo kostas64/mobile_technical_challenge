@@ -1,4 +1,5 @@
 import React from "react";
+import { Colors } from "../../assets/Colors";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
 import { View, Text, StyleSheet, Image } from "react-native";
 
@@ -16,7 +17,7 @@ const CityTag = ({ label, source, imageStyle }) => {
 const styles = StyleSheet.create({
   container: {
     width: DimensionsUtils.getDP(140),
-    backgroundColor: "rgba(0,0,0,0.05)",
+    backgroundColor: Colors.veryLightGrey,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     paddingVertical: DimensionsUtils.getDP(6),
   },
   label: {
-    color: "black",
+    color: Colors.black,
     fontSize: DimensionsUtils.getFontSize(14),
     fontFamily: "Montserrat-Regular",
   },
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: DimensionsUtils.getDP(40),
     padding: DimensionsUtils.getDP(4),
-    backgroundColor: "white",
+    backgroundColor: Colors.white,
     borderRadius: DimensionsUtils.getDP(8),
   },
 });

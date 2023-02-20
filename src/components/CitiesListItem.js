@@ -9,6 +9,7 @@ import {
 import React from "react";
 import { images } from "../../Images";
 import { LikeButton } from "./LikeButton";
+import { Colors } from "../../assets/Colors";
 import { useNavigation } from "@react-navigation/native";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
 
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
     height: DimensionsUtils.getDP(180),
     borderWidth: 1,
-    borderColor: "rgba(0,0,0,0.2)",
+    borderColor: Colors.lightGrey,
     marginHorizontal: 16,
     marginVertical: DimensionsUtils.getDP(8),
     borderRadius: DimensionsUtils.getDP(8),
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     width: DimensionsUtils.getIconSize(18),
   },
   cityName: {
-    color: "black",
+    color: Colors.black,
     fontFamily: "Montserrat-SemiBold",
     fontSize: DimensionsUtils.getFontSize(14),
     marginTop: DimensionsUtils.getDP(8),
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     fontSize: DimensionsUtils.getFontSize(12),
     fontFamily: "Montserrat-Medium",
     marginLeft: DimensionsUtils.getDP(12),
-    color: "rgba(0,0,0,0.5)",
+    color: Colors.grey,
   },
   navIcon: {
     alignSelf: "flex-end",

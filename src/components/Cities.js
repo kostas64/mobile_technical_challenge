@@ -1,6 +1,7 @@
 import React from "react";
 import Loading from "./Loading";
 import { useQuery } from "@apollo/client";
+import { Colors } from "../../assets/Colors";
 import CitiesListItem from "./CitiesListItem";
 import dict from "../../assets/dictionary.json";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
@@ -53,10 +54,10 @@ const Cities = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "white",
+    backgroundColor: Colors.white,
   },
   title: {
-    color: "black",
+    color: Colors.black,
     fontSize: DimensionsUtils.getFontSize(18),
     fontFamily: "Montserrat-SemiBold",
     paddingTop: DimensionsUtils.getDP(16),

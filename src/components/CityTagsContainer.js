@@ -1,6 +1,7 @@
 import React from "react";
 import CityTag from "./CityTag";
 import { flags } from "../../assets/Flags";
+import { Colors } from "../../assets/Colors";
 import { StyleSheet, View } from "react-native";
 import dict from "../../assets/dictionary.json";
 import { currencies } from "../../assets/Currencies";
@@ -32,12 +33,12 @@ const styles = StyleSheet.create({
     marginLeft: DimensionsUtils.getDP(4),
   },
   cityName: {
-    color: "black",
+    color: Colors.black,
     fontFamily: "Montserrat-Medium",
     fontSize: DimensionsUtils.getFontSize(18),
   },
   nativeName: {
-    color: "rgba(0,0,0,0.5)",
+    color: Colors.grey,
     fontFamily: "Montserrat-Regular",
     fontSize: DimensionsUtils.getFontSize(16),
   },

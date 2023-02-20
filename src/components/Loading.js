@@ -1,5 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react-native";
+import { Colors } from "../../assets/Colors";
 import { StyleSheet, View } from "react-native";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
 
@@ -21,8 +22,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: DimensionsUtils.getDP(12),
-    backgroundColor: "white",
-    shadowColor: "black",
+    backgroundColor: Colors.white,
+    shadowColor: Colors.black,
     shadowOpacity: 0.5,
     shadowRadius: 2,
     shadowOffset: {
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     },
     elevation: 4,
     borderWidth: 1,
-    borderColor: "rgba(0,0,0,0.1)",
+    borderColor: Colors.borderGrey,
     width: DimensionsUtils.getDP(110),
     height: DimensionsUtils.getDP(110),
   },

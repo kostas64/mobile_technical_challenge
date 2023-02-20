@@ -1,6 +1,7 @@
 import { StatusBar } from "react-native";
 import Cities from "../components/Cities";
 import Header from "../components/Header";
+import { Colors } from "../../assets/Colors";
 import { FlatList, StyleSheet } from "react-native";
 
 const HomeScreen = () => {
@@ -28,7 +29,7 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "white",
+    backgroundColor: Colors.white,
   },
 });
 

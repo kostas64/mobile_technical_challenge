@@ -1,4 +1,5 @@
 import React from "react";
+import { Colors } from "../../assets/Colors";
 import dict from "../../assets/dictionary.json";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
 import ImageWithButton from "../components/ImageWIthButton";
@@ -35,7 +36,7 @@ const CityScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "white",
+    backgroundColor: Colors.white,
     paddingHorizontal: DimensionsUtils.getDP(8),
   },
   thingsContainer: {
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     paddingTop: DimensionsUtils.getDP(8),
   },
   thingsTitle: {
-    color: "black",
+    color: Colors.black,
     fontFamily: "Montserrat-Bold",
     fontSize: DimensionsUtils.getFontSize(18),
     marginTop: DimensionsUtils.getDP(24),

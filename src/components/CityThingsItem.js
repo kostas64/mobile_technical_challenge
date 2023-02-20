@@ -7,6 +7,7 @@ import {
   Pressable,
   StyleSheet,
 } from "react-native";
+import { Colors } from "../../assets/Colors";
 import React, { useRef, useState } from "react";
 import CityThingsMapItem from "./CityThingsMapItem";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
     height: DimensionsUtils.getDP(38),
   },
   label: {
-    color: "black",
+    color: Colors.black,
     marginLeft: DimensionsUtils.getDP(16),
     fontFamily: "Montserrat-SemiBold",
     fontSize: DimensionsUtils.getFontSize(16),
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
   arrowContainer: {
     borderRadius: DimensionsUtils.getDP(8),
     padding: DimensionsUtils.getDP(8),
-    backgroundColor: "rgba(0,0,0,0.05)",
+    backgroundColor: Colors.veryLightGrey,
   },
   pressIcon: {
     width: DimensionsUtils.getDP(16),
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
   bodyBackground: {
     marginTop: DimensionsUtils.getDP(12),
     borderRadius: DimensionsUtils.getDP(12),
-    backgroundColor: "rgba(0,0,0,0.05)",
+    backgroundColor: Colors.veryLightGrey,
     overflow: "hidden",
   },
   bodyContainer: {

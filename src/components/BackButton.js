@@ -1,4 +1,5 @@
 import React from "react";
+import { Colors } from "../../assets/Colors";
 import { View, Image, StyleSheet } from "react-native";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
 
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "white",
+    backgroundColor: Colors.white,
     width: DimensionsUtils.getDP(28),
     height: DimensionsUtils.getDP(28),
     borderRadius: DimensionsUtils.getDP(16),

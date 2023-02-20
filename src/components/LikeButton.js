@@ -1,3 +1,4 @@
+import { Colors } from "../../assets/Colors";
 import React, { useState, useRef } from "react";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
 import { Animated, Image, StyleSheet } from "react-native";
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
     borderRadius: DimensionsUtils.getDP(16),
     height: DimensionsUtils.getDP(30),
     width: DimensionsUtils.getDP(30),
-    backgroundColor: "white",
+    backgroundColor: Colors.white,
     position: "absolute",
     top: DimensionsUtils.getDP(22),
     right: DimensionsUtils.getDP(28),
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     elevation: 10,
     zIndex: 10,
-    shadowColor: "black",
+    shadowColor: Colors.black,
     shadowOpacity: 0.25,
     shadowRadius: 2.5,
     shadowOffset: {

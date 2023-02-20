@@ -1,4 +1,5 @@
 import React from "react";
+import { Colors } from "../../assets/Colors";
 import dict from "../../assets/dictionary.json";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
 import { View, StyleSheet, Image, Text } from "react-native";
@@ -38,7 +39,7 @@ const Header = ({}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffef9f",
+    backgroundColor: Colors.lightYellow,
     paddingHorizontal: DimensionsUtils.getDP(16),
     flexDirection: "row",
     alignItems: "center",
@@ -48,12 +49,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   labelMed: {
-    color: "black",
+    color: Colors.black,
     fontFamily: "Montserrat-Regular",
     fontSize: DimensionsUtils.getFontSize(18),
   },
   labelBold: {
-    color: "black",
+    color: Colors.black,
     fontFamily: "Montserrat-Bold",
     fontSize: DimensionsUtils.getFontSize(18),
   },

@@ -1,4 +1,5 @@
 import React from "react";
+import { Colors } from "../../assets/Colors";
 import MapView, { Marker } from "react-native-maps";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
 import { View, Text, Dimensions, StyleSheet } from "react-native";
@@ -39,17 +40,17 @@ const styles = StyleSheet.create({
     marginBottom: DimensionsUtils.getDP(16),
   },
   bullet: {
-    color: "black",
+    color: Colors.black,
     fontSize: DimensionsUtils.getFontSize(10),
   },
   itemName: {
-    color: "black",
+    color: Colors.black,
     fontFamily: "Montserrat-Medium",
     fontSize: DimensionsUtils.getFontSize(14),
     marginBottom: DimensionsUtils.getDP(8),
   },
   mapContainer: {
-    backgroundColor: "white",
+    backgroundColor: Colors.white,
     padding: DimensionsUtils.getDP(6),
   },
   map: {
