@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
   label: {
     color: "black",
-    fontSize: DimensionsUtils.getDP(14),
+    fontSize: DimensionsUtils.getFontSize(14),
     fontFamily: "Montserrat-Regular",
   },
   imageContainer: {

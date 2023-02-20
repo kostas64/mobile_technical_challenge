@@ -11,9 +11,20 @@
     "graphql": "json-graphql-server db.js"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.8",
+    "@react-navigation/native": "^6.1.4",
+    "@react-navigation/native-stack": "^6.9.10",
+    "graphql": "^16.6.0",
     "json-graphql-server": "^2.3.2",
+    "lottie-ios": "3.4.0",
+    "lottie-react-native": "5.1.4",
     "react": "18.2.0",
-    "react-native": "0.71.3"
+    "react-native": "0.71.3",
+    "react-native-maps": "^1.4.0",
+    "react-native-pixel-perfect": "^1.0.2",
+    "react-native-safe-area-context": "^4.5.0",
+    "react-native-screens": "^3.20.0",
+    "react-native-splash-screen": "3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
