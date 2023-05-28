@@ -2,7 +2,7 @@ import React from "react";
 import { Colors } from "../../assets/Colors";
 import MapView, { Marker } from "react-native-maps";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
-import { View, Text, Dimensions, StyleSheet } from "react-native";
+import { View, Text, Dimensions, StyleSheet, Platform } from "react-native";
 
 const { width } = Dimensions.get("window");
 
@@ -14,22 +14,24 @@ const CityThingsMapItem = ({ place, isLast }) => {
         <Text style={styles.itemName}>{`  ${place?.name}`}</Text>
       </View>
       <View style={styles.mapContainer}>
-        <MapView
-          style={styles.map}
-          region={{
-            latitude: place?.coordinates?.[0],
-            longitude: place?.coordinates?.[1],
-            latitudeDelta: 0.02,
-            longitudeDelta: 0.01,
-          }}
-        >
-          <Marker
-            coordinate={{
+        {Platform.OS === "ios" && (
+          <MapView
+            style={styles.map}
+            region={{
               latitude: place?.coordinates?.[0],
               longitude: place?.coordinates?.[1],
+              latitudeDelta: 0.02,
+              longitudeDelta: 0.01,
             }}
-          />
-        </MapView>
+          >
+            <Marker
+              coordinate={{
+                latitude: place?.coordinates?.[0],
+                longitude: place?.coordinates?.[1],
+              }}
+            />
+          </MapView>
+        )}
       </View>
     </View>
   );

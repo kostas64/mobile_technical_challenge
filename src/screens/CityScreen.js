@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     backgroundColor: Colors.white,
-    paddingHorizontal: DimensionsUtils.getDP(8),
   },
   thingsContainer: {
     paddingHorizontal: DimensionsUtils.getDP(12),
@@ -47,9 +46,9 @@ const styles = StyleSheet.create({
     color: Colors.black,
     fontFamily: "Montserrat-Bold",
     fontSize: DimensionsUtils.getFontSize(18),
-    marginTop: DimensionsUtils.getDP(24),
+    marginTop: DimensionsUtils.getDP(16),
     marginBottom: DimensionsUtils.getDP(12),
-    paddingHorizontal: DimensionsUtils.getDP(8),
+    paddingHorizontal: DimensionsUtils.getDP(16),
   },
 });
 

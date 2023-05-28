@@ -10,6 +10,7 @@ import React from "react";
 import { images } from "../../Images";
 import { LikeButton } from "./LikeButton";
 import { Colors } from "../../assets/Colors";
+import Animated from "react-native-reanimated";
 import { useNavigation } from "@react-navigation/native";
 import { DimensionsUtils } from "../utils/DimensionsUtils";
 
@@ -35,17 +36,40 @@ const CitiesListItem = ({ index, cities, item, places }) => {
           },
         ]}
       >
-        <Image source={images[item?.key]} style={styles.image} />
-        <Text style={styles.cityName}>{item.name}</Text>
+        <Animated.Image
+          resizeMode="cover"
+          sharedTransitionTag={`img-${item.key}`}
+          source={images[item?.key]}
+          style={styles.image}
+        />
+
         <View style={styles.footer}>
-          <Text style={styles.nativeName}>{item.nativeName}</Text>
+          <View>
+            <Text
+              sharedTransitionTag={`title-${item.key}`}
+              style={styles.cityName}
+            >
+              {item.name}
+            </Text>
+            <Text
+              sharedTransitionTag={`orgTitle-${item.key}`}
+              style={styles.nativeName}
+            >
+              {item.nativeName}
+            </Text>
+          </View>
           <Image
             source={require("../../assets/icons/right-arrow.png")}
             style={styles.navIcon}
           />
         </View>
       </Pressable>
-      <LikeButton style={styles.likeButton} />
+      <Animated.View
+        sharedTransitionTag={`like-${item.key}`}
+        style={styles.likeContainer}
+      >
+        <LikeButton style={styles.likeButton} />
+      </Animated.View>
     </>
   );
 };
@@ -53,7 +77,6 @@ const CitiesListItem = ({ index, cities, item, places }) => {
 const styles = StyleSheet.create({
   itemContainer: {
     zIndex: 1,
-    height: DimensionsUtils.getDP(180),
     borderWidth: 1,
     borderColor: Colors.lightGrey,
     marginHorizontal: 16,
@@ -66,8 +89,13 @@ const styles = StyleSheet.create({
     width: WIDTH - 34,
     height: DimensionsUtils.getDP(128),
   },
+  likeContainer: {
+    position: "absolute",
+    top: DimensionsUtils.getDP(24),
+    right: 6,
+    zIndex: 100,
+  },
   likeButton: {
-    top: DimensionsUtils.getDP(7),
     right: DimensionsUtils.getDP(6),
     height: DimensionsUtils.getIconSize(18),
     width: DimensionsUtils.getIconSize(18),
@@ -75,24 +103,22 @@ const styles = StyleSheet.create({
   cityName: {
     color: Colors.black,
     fontFamily: "Montserrat-SemiBold",
-    fontSize: DimensionsUtils.getFontSize(14),
-    marginTop: DimensionsUtils.getDP(8),
-    marginLeft: DimensionsUtils.getDP(12),
+    fontSize: DimensionsUtils.getFontSize(16),
   },
   nativeName: {
-    fontSize: DimensionsUtils.getFontSize(12),
+    fontSize: DimensionsUtils.getFontSize(14),
     fontFamily: "Montserrat-Medium",
-    marginLeft: DimensionsUtils.getDP(12),
     color: Colors.grey,
   },
   navIcon: {
-    alignSelf: "flex-end",
     width: DimensionsUtils.getDP(12),
     height: DimensionsUtils.getDP(12),
-    marginRight: DimensionsUtils.getDP(12),
   },
   footer: {
+    paddingVertical: DimensionsUtils.getDP(8),
+    paddingHorizontal: DimensionsUtils.getDP(16),
     flexDirection: "row",
+    alignItems: "center",
     justifyContent: "space-between",
   },
 });

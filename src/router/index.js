@@ -17,20 +17,8 @@ const Router = () => {
           animation: "slide_from_right",
         }}
       >
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{
-            animationTypeForReplace: "pop",
-          }}
-        />
-        <Stack.Screen
-          name="City"
-          component={CityScreen}
-          options={{
-            animationTypeForReplace: "pop",
-          }}
-        />
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="City" component={CityScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

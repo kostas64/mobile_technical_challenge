@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
     width: DimensionsUtils.getDP(30),
     backgroundColor: Colors.white,
     position: "absolute",
-    top: DimensionsUtils.getDP(22),
     right: DimensionsUtils.getDP(28),
     alignItems: "center",
     justifyContent: "center",

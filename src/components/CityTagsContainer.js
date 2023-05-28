@@ -29,8 +29,7 @@ const styles = StyleSheet.create({
   tagsContainer: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: DimensionsUtils.getDP(24),
-    marginLeft: DimensionsUtils.getDP(4),
+    marginLeft: DimensionsUtils.getDP(16),
   },
   cityName: {
     color: Colors.black,

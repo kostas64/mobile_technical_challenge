@@ -8,5 +8,5 @@ export const images = {
   london: require("./assets/photos/london.jpg"),
   paris: require("./assets/photos/paris.jpg"),
   rome: require("./assets/photos/rome.jpg"),
-  tokyo: require("./assets/photos/tokyo.jpeg"),
+  tokyo: require("./assets/photos/tokyo.jpg"),
 };
